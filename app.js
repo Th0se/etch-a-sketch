@@ -1,19 +1,39 @@
-const horizontalDiv = ((elementInput) => {
+const makeHorizontalDiv = ((elementInput) => {
     let result = [];
     const numberOfDiv = 16;
     for (let i = 0; i < numberOfDiv; i++) {
         result.push(`<div class="grid"></div>`);
     };
-    console.log(result);
     result = result.join('');
-    console.log(result);
     elementInput.innerHTML = result;
 });
 
+const makeHorizontalContainer = ((elementInput) => {
+    let result = [];
+    const numberOfDiv = 16;
+    for (let i = 0; i < numberOfDiv; i++) {
+        result.push(`<div class="horizontalContainer"></div>`);
+    };
+    result = result.join('');
+    elementInput.innerHTML = result;
+});
 
-const mainContainer = document.querySelector(`#mainSelector`);
+const enumerate = ((elementInput) => {
+    for (let i = 0; i < elementInput.length; i++) {
+        elementInput[i].setAttribute(`id`, `horizontalContainer${i + 1}`);
+    };
+});
 
-const horizontalContainer1 = document.querySelector(`#horizontalContainer1`);
+
+
+const mainContainer = document.querySelector(`#mainContainer`);
+makeHorizontalContainer(mainContainer);
+
+const horizontalContainers = document.querySelectorAll('.horizontalContainer');
+enumerate(horizontalContainers);
+console.log(horizontalContainers);
+
+/* const horizontalContainer1 = document.querySelector(`#horizontalContainer1`);
 horizontalDiv(horizontalContainer1);
 
 const horizontalContainer2 = document.querySelector(`#horizontalContainer2`);
@@ -60,4 +80,4 @@ horizontalDiv(horizontalContainer15);
 
 const horizontalContainer16 = document.querySelector(`#horizontalContainer16`);
 horizontalDiv(horizontalContainer16);
-
+*/
