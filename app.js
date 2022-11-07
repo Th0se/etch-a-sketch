@@ -50,4 +50,7 @@ grid.forEach((i) => {
     i.style.width = `6%`;
     i.style.border = `solid 1px black`;
     i.style.backgroundColor = `green`;
+    i.addEventListener(`mouseover`, () => {
+        i.style.backgroundColor = `blue`;
+    })
 })
