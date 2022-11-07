@@ -1,0 +1,23 @@
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    width: 1000px;
+    background-color: black;
+}
+
+.horizontalContainer {
+    width: 100%;
+    height: 6%;
+    background-color: chartreuse;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: row;
+}
+
+.grid {
+    height: 100%;
+    width: 6%;
+    background-color: aqua;
+    border: solid 1px black;
+}
