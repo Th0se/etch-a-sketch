@@ -85,9 +85,51 @@ horizontalDiv4_2.classList.add(`horizontalDiv`);
 
 const horizontalDiv5_2 = document.createElement(`div`);
 horizontalDiv5_2.setAttribute(`id`, `horizontalDiv5_2`);
-horizontalDiv5_2.classList.add(`horizontal`);
+horizontalDiv5_2.classList.add(`horizontalDiv`);
 
+const horizontalDiv6_2 = document.createElement(`div`);
+horizontalDiv6_2.setAttribute(`id`, `horizontalDiv6_2`);
+horizontalDiv6_2.classList.add(`horizontalDiv`);
 
+const horizontalDiv7_2 = document.createElement(`div`);
+horizontalDiv7_2.setAttribute(`id`, `horizontalDiv7_2`);
+horizontalDiv7_2.classList.add(`horizontalDiv`);
+
+const horizontalDiv8_2 = document.createElement(`div`);
+horizontalDiv8_2.setAttribute(`id`, `horizontalDiv8_2`);
+horizontalDiv8_2.classList.add(`horizontalDiv`);
+
+const horizontalDiv9_2 = document.createElement(`div`);
+horizontalDiv9_2.setAttribute(`id`, `horizontalDiv9_2`);
+horizontalDiv9_2.classList.add(`horizontalDiv`);
+
+const horizontalDiv10_2 = document.createElement(`div`);
+horizontalDiv10_2.setAttribute(`id`, `horizontalDiv10_2`);
+horizontalDiv10_2.classList.add(`horizontalDiv`);
+
+const horizontalDiv11_2 = document.createElement(`div`);
+horizontalDiv11_2.setAttribute(`id`, `horizontalDiv11_2`);
+horizontalDiv11_2.classList.add(`horizontalDiv`);
+
+const horizontalDiv12_2 = document.createElement(`div`);
+horizontalDiv12_2.setAttribute(`id`, `horizontalDiv12_2`);
+horizontalDiv12_2.classList.add(`horizontalDiv`);
+
+const horizontalDiv13_2 = document.createElement(`div`);
+horizontalDiv13_2.setAttribute(`id`, `horizontalDiv13_2`);
+horizontalDiv13_2.classList.add(`horizontalDiv`)
+
+const horizontalDiv14_2 = document.createElement(`div`);
+horizontalDiv14_2.setAttribute(`id`, `horizontalDiv14_2`);
+horizontalDiv14_2.classList.add(`horizontalDiv`);
+
+const horizontalDiv15_2 = document.createElement(`div`);
+horizontalDiv15_2.setAttribute(`id`, `horizontalDiv15_2`);
+horizontalDiv15_2.classList.add(`horizontalDiv`);
+
+const horizontalDiv16_2 = document.createElement(`div`);
+horizontalDiv16_2.setAttribute(`id`, `horizontalDiv16_2`);
+horizontalDiv16_2.classList.add(`horizontalDiv`);
 
 
 const horizontalContainer1 = document.querySelector(`#horizontalContainer1`);
@@ -113,3 +155,18 @@ horizontalContainer1.appendChild(horizontalDiv15_1);
 horizontalContainer1.appendChild(horizontalDiv16_1);
 
 horizontalContainer2.appendChild(horizontalDiv1_2);
+horizontalContainer2.appendChild(horizontalDiv2_2);
+horizontalContainer2.appendChild(horizontalDiv3_2);
+horizontalContainer2.appendChild(horizontalDiv4_2);
+horizontalContainer2.appendChild(horizontalDiv5_2);
+horizontalContainer2.appendChild(horizontalDiv6_2);
+horizontalContainer2.appendChild(horizontalDiv7_2);
+horizontalContainer2.appendChild(horizontalDiv8_2);
+horizontalContainer2.appendChild(horizontalDiv9_2);
+horizontalContainer2.appendChild(horizontalDiv10_2);
+horizontalContainer2.appendChild(horizontalDiv11_2);
+horizontalContainer2.appendChild(horizontalDiv12_2);
+horizontalContainer2.appendChild(horizontalDiv13_2);
+horizontalContainer2.appendChild(horizontalDiv14_2);
+horizontalContainer2.appendChild(horizontalDiv15_2);
+horizontalContainer2.appendChild(horizontalDiv16_2);
