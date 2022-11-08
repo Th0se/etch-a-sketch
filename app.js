@@ -29,6 +29,8 @@ const enumerate = ((elementInput) => {
 const resetButton = document.createElement(`div`);
 resetButton.setAttribute(`id`, `resetButton`);
 resetButton.textContent = `generate new grid`;
+resetButton.style.margin = `4px`;
+resetButton.style.border = `1px solid black`;
 
 
 
@@ -63,3 +65,4 @@ grid.forEach((i) => {
 
 const topArea = document.querySelector('#topArea');
 topArea.appendChild(resetButton);
+topArea.style.textAlign = 'center';
