@@ -29,7 +29,8 @@ const enumerate = ((elementInput) => {
 const resetButton = document.createElement(`div`);
 resetButton.setAttribute(`id`, `resetButton`);
 resetButton.textContent = `generate new grid`;
-resetButton.style.margin = `4px`;
+resetButton.style.margin = `10px`;
+resetButton.style.padding = `10px`;
 resetButton.style.border = `1px solid black`;
 
 
@@ -38,8 +39,9 @@ const mainContainer = document.querySelector(`#mainContainer`);
 makeHorizontalContainer(mainContainer);
 mainContainer.style.display = `flex`;
 mainContainer.style.flexDirection = `column`;
-mainContainer.style.width = `1000px`;
+mainContainer.style.width = `100%`;
 mainContainer.style.height = `1000px`;
+mainContainer.style.margin = `auto`;
 
 
 const horizontalContainers = document.querySelectorAll('.horizontalContainer');
@@ -65,4 +67,5 @@ grid.forEach((i) => {
 
 const topArea = document.querySelector('#topArea');
 topArea.appendChild(resetButton);
-topArea.style.textAlign = 'center';
+topArea.style.display = `flex`;
+topArea.style.justifyContent = 'center';
