@@ -1,6 +1,6 @@
 # etch-a-sketch
 ## Unfinished!
-A simple app to demonstrate my ability in utilising Javasciprt.
+A simple project to learn Javascript
 
 
 
