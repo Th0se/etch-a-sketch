@@ -1,5 +1,5 @@
 # etch-a-sketch
-##Unfinished!
+## Unfinished!
 A simple app to demonstrate my ability in utilising Javasciprt.
 
 
