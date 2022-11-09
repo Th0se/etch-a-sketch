@@ -11,3 +11,7 @@
     border: solid 1px black;
     background-color: blue;
 }
+
+#toparea:children {
+    margin: auto;
+}

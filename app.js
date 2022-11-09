@@ -1,6 +1,7 @@
 const mainContainer = document.querySelector(`#mainContainer`);
 
 const makeGrids = () => {
+    mainContainer.setAttribute(`style`, `grid-template-columns: repeat(16, 2fr); grid-template-rows: repeat(16, 2fr)`);
     for (let i = 0; i < 256; i++) {
         const cell = document.createElement(`div`);
         cell.classList.add(`cell`);
@@ -17,12 +18,17 @@ const removeAllChildNodes = ((elementInput) => {
     };
 });
 
-const resetButton = document.createElement(`div`);
+const resetButton = document.createElement(`button`);
 resetButton.setAttribute(`id`, `resetButton`);
-resetButton.textContent = `generate new grid`;
+resetButton.textContent = `reset colour`;
 resetButton.style.margin = `10px`;
 resetButton.style.padding = `10px`;
 resetButton.style.border = `1px solid black`;
+resetButton.addEventListener('click', () => {
+    for (let i = 0; i < sizeSlider.value * sizeSlider.value; i++) {
+        mainContainer.children[i].style.backgroundColor = `blue`;
+    };
+});
 
 const sizeSlider = document.querySelector(`#sizeSlider`);
 const sizeDisplay = document.createElement(`p`);
