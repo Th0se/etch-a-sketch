@@ -35,6 +35,12 @@ resetButton.style.border = `1px solid black`;
 
 
 
+const sizeSlider = document.querySelector(`#sizeSlider`);
+const sizeDisplay = document.createElement(`p`);
+sizeDisplay.textContent = sizeSlider.value;
+
+
+
 const mainContainer = document.querySelector(`#mainContainer`);
 makeHorizontalContainer(mainContainer);
 mainContainer.style.display = `flex`;
@@ -67,5 +73,6 @@ grid.forEach((i) => {
 
 const topArea = document.querySelector('#topArea');
 topArea.appendChild(resetButton);
+topArea.appendChild(sizeDisplay);
 topArea.style.display = `flex`;
 topArea.style.justifyContent = 'center';
