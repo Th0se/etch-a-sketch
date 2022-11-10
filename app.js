@@ -1,4 +1,7 @@
 const mainContainer = document.querySelector(`#mainContainer`);
+mainContainer.style.border = `3px solid black`;
+
+const colour = `green`;
 
 const makeGrids = () => {
     mainContainer.setAttribute(`style`, `grid-template-columns: repeat(16, 2fr); grid-template-rows: repeat(16, 2fr)`);
@@ -6,7 +9,7 @@ const makeGrids = () => {
         const cell = document.createElement(`div`);
         cell.classList.add(`cell`);
         cell.addEventListener(`click`, (i) => {
-            i.target.style.backgroundColor = `green`;
+            i.target.style.backgroundColor = colour;
         });
         mainContainer.appendChild(cell);
     };
@@ -20,10 +23,10 @@ const removeAllChildNodes = ((elementInput) => {
 
 const resetButton = document.createElement(`button`);
 resetButton.setAttribute(`id`, `resetButton`);
-resetButton.textContent = `reset colour`;
-resetButton.style.margin = `10px`;
+resetButton.textContent = `clear grid`;
+resetButton.style.margin = `5px`;
 resetButton.style.padding = `10px`;
-resetButton.style.border = `1px solid black`;
+resetButton.style.border = `3px solid black`;
 resetButton.addEventListener('click', () => {
     for (let i = 0; i < sizeSlider.value * sizeSlider.value; i++) {
         mainContainer.children[i].style.backgroundColor = `blue`;
@@ -38,9 +41,9 @@ sizeSlider.addEventListener(`input`, () => {
     for (let i = 0; i < sizeSlider.value*sizeSlider.value; i++) {
         const div = document.createElement('div');
         div.classList.add('cell');
-        div.addEventListener('click', function(event){
-            event.target.style.backgroundColor = green;
-        })
+        div.addEventListener('click', ((event) => {
+            event.target.style.backgroundColor = colour;
+        }));
         mainContainer.appendChild(div); 
     }
 });
@@ -53,35 +56,46 @@ sizeControl.appendChild(sizeDisplay);
 sizeControl.style.display = `flex`;
 sizeControl.style.flexDirection = `column`;
 sizeControl.style.alignItems = "center";
+sizeControl.style.border = `3px solid black`;
+sizeControl.style.margin = `5px`;
 
-const colourControl = document.createElement(`div`);
+const colourNote = document.createElement(`p`);
+colourNote.textContent = `Note: the default colour is green,
+                            and you must choose a colour
+                            each time you resize the grid.`
+
 const colourPicker = document.createElement(`input`);
 colourPicker.setAttribute(`type`, `color`);
 colourPicker.addEventListener(`input`, (() => {
+    let colour = colourPicker.value;
     for (let i = 0; i < sizeSlider.value*sizeSlider.value; i++) {
         mainContainer.children[i].addEventListener(`click`, ((event) => {
-            event.target.style.backgroundColor = newColor;
-        });
-    });
-);
-colourControl.appendChild(colourPicker);
+            event.target.style.backgroundColor = colour;
+        }));
+    };
+}));
+
+const colourInstruction = document.createElement(`p`);
+colourInstruction.textContent = `<= use this button to set
+                                    how the grid change colour.`;
+colourInstruction.style.marginLeft = `2px`;
+
+const colourButton = document.createElement(`div`);
+colourButton.appendChild(colourPicker);
+colourButton.appendChild(colourInstruction);
+colourButton.style.display = `flex`;
+colourButton.style.alignItems = `center`;
+
+const colourControl = document.createElement(`div`);
+colourControl.appendChild(colourButton);
+colourControl.appendChild(colourNote);
+colourControl.style.border = '3px solid black';
+colourControl.style.margin = '5px';
 
 const topArea = document.querySelector('#topArea');
 topArea.appendChild(resetButton);
 topArea.appendChild(colourControl);
 topArea.style.display = `flex`;
-topArea.style.justifyContent = 'center';
+topArea.style.flexDirection = `column`;
 
 makeGrids();
-
-const chooseColor = document.querySelector('#color');
-chooseColor.addEventListener('input', function(){
-    let val = slider.value;
-    let newColor = chooseColor.value;
-    let cell = grid.children;
-    for (let i = 0; i < val*val; i++) {
-        cell[i].addEventListener('mouseover', function(event){
-            event.target.style.backgroundColor = newColor;
-        })
-    }
-});

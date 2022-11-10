@@ -1,3 +1,7 @@
+body {
+    display: flex;
+}
+
 #mainContainer {
     display: grid;
     grid-template-columns: 16;
