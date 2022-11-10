@@ -1,6 +1,5 @@
 # etch-a-sketch
-## Unfinished!
-A simple project to learn Javascript
+A simple project to demonstrate javascript.
 
 
 
