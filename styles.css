@@ -1,0 +1,21 @@
+body {
+    display: flex;
+}
+
+#mainContainer {
+    display: grid;
+    grid-template-columns: 16;
+    grid-template-rows: 16;
+    width: 900px;
+    height: 900px;
+    margin: auto;
+}
+
+.cell {
+    border: solid 1px black;
+    background-color: blue;
+}
+
+#toparea:children {
+    margin: 30px;
+}

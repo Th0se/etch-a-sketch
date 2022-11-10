@@ -4,10 +4,14 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Etch a Sketch</title>
-        <!-- <link href="styles.css" rel="stylesheet" type="text/css" /> -->
+        <link href="styles.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <header id="topArea"></header>
+        <header id="topArea">
+            <div id="sizeControl">
+                <input type="range" id="sizeSlider" value="16" min="4" max="25" />
+            </div>
+        </header>
         <main id="mainContainer"></main>
         <footer></footer>
         <script src="app.js"></script>
